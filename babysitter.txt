@@ -1,0 +1,20 @@
+admin
+-home
+-users
+-babysitters
+-manage services
+-enquiry
+-manage pages(about us , contact us)
+-report
+-logout
+
+user
+-home
+-services
+-babysitters
+-logout
+
+babysitter
+-Home
+-Logout
+-

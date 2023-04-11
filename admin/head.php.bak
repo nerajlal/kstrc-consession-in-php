@@ -1,0 +1,31 @@
+<?php
+  session_start();
+  //authorization
+  if(!isset($_SESSION['username'])||$_SESSION['user']!='admin')
+  {
+    echo"<script>alert('You are not authorized to view this page!');</script>";
+    echo"<script>location.href='../index.php';</script>";
+  }
+?>
+
+
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+            <a href="index.php" class="navbar-brand">
+                <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>KSRTC</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="index.php" class="nav-item nav-link active">Home</a>
+                    <a href="approvebuspass.php" class="nav-item nav-link">Approve Bus Pass</a>
+					<a href="Generate QR Code.php" class="nav-item nav-link">Generate QR Code</a>
+					
+					<a href="addconductor.php" class="nav-item nav-link">Add Conductor</a>
+					<a href="viewqr.php" class="nav-item nav-link">View QR Codes</a>
+					
+                </div>
+                <a href="logout.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Logout<i class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+        </nav>
